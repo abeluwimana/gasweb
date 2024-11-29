@@ -1,0 +1,413 @@
+:root {
+    --primaryColor: #0e6253; /* Main brand color */
+    --secondaryColor: #ffc107; /* Accent color */
+    --whiteColor: #fff; /* White color */
+    --blackColor: #222; /* Dark text color */
+    --softGreenColor: #d9f2ee; /* Soft green background */
+    --darkGreyColor: #a7a7aa; /* Dark grey for containers and backgrounds */
+    --greyColor: #f5f5f5; /* Light grey */
+    ---blueColor: #00008b; /* Dark Blue */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: var(---blueColor); /* Apply black background to entire body */
+    color: var(--whiteColor); /* Set default text color to white for contrast */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--secondaryColor); /* Primary color for navbar */
+    color: var(--whiteColor); /* White text in navbar */
+}
+
+.navbar h2 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--whiteColor); /* White links */
+    font-size: 14px;
+}
+/* General styling for the nav-icons container */
+.nav-icons {
+    display: flex;              /* Arrange items horizontally */
+    align-items: center;        /* Vertically center the items */
+}
+
+/* Styling the login link */
+.nav-icons a.login-link {
+    color: var(--whiteColor);    /* White text color */
+    font-size: 16px;             /* Font size for text */
+    text-decoration: none;       /* Remove underline from link */
+    display: flex;               /* Align icon and text in a row */
+    align-items: center;         /* Vertically align the icon and text */
+    margin-left: 20px;           /* Space between the icon and the next item */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Styling the icon inside the login link */
+.nav-icons a.login-link i {
+    margin-right: 8px;          /* Space between the icon and text */
+    font-size: 20px;            /* Icon size */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Hover effect for the login link */
+.nav-icons a.login-link:hover {
+    color: var(---blueColor); /* Change color to accent color on hover */
+    transform: scale(1.1);         /* Slightly enlarge the link on hover */
+}
+
+/* Hover effect for the icon */
+.nav-icons a.login-link:hover i {
+    transform: rotate(15deg); /* Slight rotation for icon on hover */
+}
+
+/* Styling the cart icon link */
+.nav-icons a.cart-link {
+    color: var(--whiteColor);    /* White text color */
+    font-size: 16px;             /* Font size for text */
+    text-decoration: none;       /* Remove underline from link */
+    display: flex;               /* Align icon and text in a row */
+    align-items: center;         /* Vertically align the icon and text */
+    margin-left: 20px;           /* Space between the icon and the next item */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Styling the icon inside the cart link */
+.nav-icons a.cart-link i {
+    margin-right: 8px;          /* Space between the icon and text */
+    font-size: 20px;            /* Icon size */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Hover effect for the cart link */
+.nav-icons a.cart-link:hover {
+    color: var(--secondaryColor); /* Change color to accent color on hover */
+    transform: scale(1.1);         /* Slightly enlarge the link on hover */
+}
+
+/* Hover effect for the cart icon */
+.nav-icons a.cart-link:hover i {
+    transform: rotate(15deg); /* Slight rotation for icon on hover */
+}
+/* Search Bar Styling */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search input {
+    width: 70%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search button:hover {
+    background-color: #0056b3;
+}
+
+
+.logo img {
+    width: 100px; /* Adjust percentage as needed */
+    height: 70px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.nav a{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    color: var(--whiteColor);
+    font-size: 25px;
+}
+.nav a:hover{
+    color: var(---blueColor);
+}
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+/* Kinds of Gas Section */
+.kinds-of-gas {
+    text-align: center;
+    margin: 40px 0;
+    background-color: var(--softGreenColor);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflow for continuous scrolling */
+}
+
+.kinds-of-gas h2 {
+    font-size: 28px;
+    color: var(--primaryColor);
+    margin-bottom: 20px;
+}
+
+.gas-slider {
+    display: flex;
+    overflow: hidden; /* Hide content beyond boundaries */
+    position: relative;
+    width: 100%;
+}
+
+.scroll-wrapper {
+    display: flex;
+    animation: scroll-no-dup 50s linear infinite; /* Smooth scrolling animation */
+}
+
+.gas-item {
+    min-width: 150px;
+    text-align: center;
+    flex-shrink: 0;
+    margin: 0 10px;
+}
+
+.gas-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gas-item p {
+    color: var(--blackColor);
+    font-size: 16px;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll-no-dup {
+    0% {
+        transform: translateX(0%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+
+.intro h1 {
+    font-size: 32px;
+    color: var(--secondaryColor);
+}
+
+.intro p {
+    font-size: 18px;
+    color: var(--whiteColor);
+}
+
+/* Services Section */
+.services {
+    margin: 30px 0;
+}
+
+.services h2 {
+    text-align: center;
+    color: var(--secondaryColor);
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--softGreenColor);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--blackColor);
+    flex: 1;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card .btn {
+    padding: 10px 20px;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background-color: var(--secondaryColor);
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    margin: 40px 0;
+    background-color: var(--darkGreyColor);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    color: var(--primaryColor);
+}
+
+.cta p {
+    font-size: 18px;
+    color: var(--whiteColor);
+    margin: 15px 0;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta .btn:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+
+/* Main Content Area */
+.main {
+    flex: 1;
+    padding: 2%;
+    background-color: var(--blackColor); /* Apply black background to main content */
+    margin-left: 250px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_logo img {
+    width: 80px;
+    height: 50px;
+}
+
+.footer_links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.footer_links a {
+    color: var(--whiteColor);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer_links a:hover {
+    border-bottom: 2px solid var(--whiteColor);
+}
+
+.footer_social a {
+    color: var(--whiteColor);
+    font-size: 2rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer_social a:hover {
+    color: var(--secondaryColor);
+}
+
+.footer_bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Media Query for Mobile Footer */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer_links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer_social {
+        margin-top: 20px;
+    }
+}

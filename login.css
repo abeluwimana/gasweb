@@ -1,0 +1,247 @@
+/* Root variables for color scheme */
+:root {
+    --primaryColor: #0e6253;
+    --secondaryColor: #ffc107;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7aa;
+    --blueColor: #00008b; 
+    --greyColor: #f5f5f5;
+}
+
+/* General reset and box model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and background color */
+body {
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar Styling */
+
+.logo img {
+    width: 80px; /* Adjust percentage as needed */
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.nav a{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    color: var(--whiteColor);
+    font-size: 25px;
+}
+.nav a:hover{
+    color: var(--secondaryColor);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.navbar h2 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--whiteColor);
+    font-size: 14px;
+}
+
+/* Login Form Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 50px;
+    background-color: var(--blueColor);
+}
+
+.login-box {
+    background-color: var(--darkGreyColor);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--whiteColor);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--whiteColor);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--whiteColor);
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.input-group input:focus {
+    border-color: var(--secondaryColor);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--primaryColor);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_logo img {
+    width: 80px; /* Adjust percentage as needed */
+    height: 50px;
+}
+
+.footer_links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.footer_links a {
+    color: var(--whiteColor);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer_links a:hover {
+    border-bottom: 2px solid var(--whiteColor);
+}
+
+.footer_social a {
+    color: var(--whiteColor);
+    font-size: 2rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer_social a:hover {
+    color: var(--secondaryColor);
+}
+
+.footer_bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Media Query for Mobile Footer */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer_links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer_social {
+        margin-top: 20px;
+    }
+}
